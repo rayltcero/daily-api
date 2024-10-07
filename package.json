@@ -5,11 +5,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
+  "prisma": {
+    "schema": "src"
+  },
   "dependencies": {
-    "elysia": "latest"
+    "@lucia-auth/adapter-prisma": "^4.0.1",
+    "@prisma/client": "5.20.0",
+    "elysia": "latest",
+    "jsend": "^1.1.0",
+    "lucia": "^3.2.0"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "prisma": "^5.20.0"
   },
   "module": "src/index.js"
 }

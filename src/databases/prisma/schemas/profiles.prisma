@@ -1,0 +1,14 @@
+model Profile {
+  id        String    @id @default(uuid())
+  userId    String    @unique
+  bio       String
+  avatar    String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  // one-to-one relationship with User
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("profiles")
+}
